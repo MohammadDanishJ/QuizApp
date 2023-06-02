@@ -39,8 +39,6 @@
                 <section>
                     <div class="container">
                         <h2>All Groups</h2>
-
-                        ${userGroups}
                         <!-- Table to display the list of tests -->
                         <table class="table table-striped">
                             <thead>
@@ -57,6 +55,7 @@
                                     <tr>
                                         <td>${group.groupCode}</td>
                                         <td>${group.groupName}</td>
+                                        <td>${group.users.size()}</td>
                                     </tr>
                                 </c:forEach>
                             </tbody>

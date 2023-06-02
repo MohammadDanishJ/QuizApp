@@ -219,31 +219,21 @@ public class RequestHandlerController {
 
         // Retrieve the selected users and assign them to the group
         List<User> users = userService.getUsersByIds(groupForm.getUserIds());
-        System.out.println("users before add"+users);
-        System.out.println("groups before add"+group);
-        /*for (User user : users) {
-            user.getGroups().add(group);
-        }*/
-
-        // Set the group for each user bidirectionally
-
-        users.forEach(user -> {
-
-            List<UserGroup> userGroups = user.getGroups();
-            if(userGroups==null)
-                userGroups = new ArrayList<>();
-
-            userGroups.add(group);
-
-            user.setGroups(user.getGroups());
-
-            userService.update(user);
-        });
 
         group.setUsers(users);
 
-//        System.out.println("users after add"+users);
-        System.out.println("groups after add"+group);
+        // Set the group for each user bidirectionally
+        users.forEach(user -> {
+
+            List<UserGroup> userGroups = user.getGroups();
+            if(userGroups==null) {
+                userGroups = new ArrayList<>();
+            }
+
+            userGroups.add(group);
+
+            user.setGroups(userGroups);
+        });
 
         // Save the group to the database
         userGroupService.createGroup(group);

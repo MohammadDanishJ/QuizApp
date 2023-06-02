@@ -30,8 +30,8 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.jdbcAuthentication()
                 .dataSource(dataSource)
-                .usersByUsernameQuery("SELECT e.username, e.password, e.enabled FROM org_nucCode_employee e WHERE e.username=?")
-                .authoritiesByUsernameQuery("SELECT e.username, er.role FROM org_nucCode_employee e JOIN org_nucCode_employee_roles er ON e.employee_id = er.employee_id WHERE e.username=?")
+                .usersByUsernameQuery("SELECT e.username, e.password, e.enabled FROM org_nucCode_user e WHERE e.username=?")
+                .authoritiesByUsernameQuery("SELECT e.username, er.role FROM org_nucCode_user e JOIN org_nucCode_user_roles er ON e.user_id = er.user_id WHERE e.username=?")
                 .passwordEncoder(passwordEncoder());
                 /*.and()
                 .inMemoryAuthentication()
