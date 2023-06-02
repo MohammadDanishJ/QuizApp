@@ -1,0 +1,96 @@
+#closeButton {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  background-color: #ffffff;
+  border-radius: 50px;
+  opacity: 1;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(247, 149, 29, 0.5);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(247, 149, 29, 0.5);
+  box-shadow: 0px 0px 30px 0px rgba(247, 149, 29, 0.5);
+  cursor: pointer;
+}
+#closeButton > span {
+  background-color: #f5a700;
+  display: block;
+  height: 8px;
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  position: absolute;
+  top: 50%;
+  margin-top: -4px;
+  left: .3rem;
+  width: 40px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+}
+#closeButton > span span {
+  display: block;
+  background-color: #ed7f00;
+  width: 8px;
+  height: 8px;
+  border-radius: 6px;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#closeButton > span.left {
+  transform: rotate(45deg);
+  transform-origin: center;
+}
+#closeButton > span.left .circle-left {
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  margin-left: 0;
+}
+#closeButton > span.left .circle-right {
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  margin-left: 32px;
+}
+#closeButton > span.right {
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
+#closeButton > span.right .circle-left {
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  margin-left: 0;
+}
+#closeButton > span.right .circle-right {
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  margin-left: 33px;
+}
+#closeButton:hover > span {
+  background-color: #2faee0;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+#closeButton:hover > span span {
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  background-color: #008ac9;
+}
+#closeButton:hover > span.left .circle-left {
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  margin-left: 32px;
+}
+#closeButton:hover > span.left .circle-right {
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  margin-left: 0;
+}
+#closeButton:hover > span.right .circle-left {
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  margin-left: 32px;
+}
+#closeButton:hover > span.right .circle-right {
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  margin-left: 0;
+}
