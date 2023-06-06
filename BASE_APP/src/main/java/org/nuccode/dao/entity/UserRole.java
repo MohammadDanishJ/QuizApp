@@ -16,6 +16,9 @@ public class UserRole {
     @Column(name = "role")
     private String role;
 
+    /**
+     * Default Constructor
+     */
     public UserRole() {
     }
 

@@ -155,7 +155,7 @@ public class CodeMatcherService {
                 writer.write(userCode);
             }
 
-            Iterable<? extends JavaFileObject> compilationUnits = fileManager.getJavaFileObjectsFromFiles(Arrays.asList(sourceFile));
+            Iterable<? extends JavaFileObject> compilationUnits = fileManager.getJavaFileObjectsFromFiles(List.of(sourceFile));
             compiler.getTask(null, fileManager, null, null, null, compilationUnits).call();
             fileManager.close();
 

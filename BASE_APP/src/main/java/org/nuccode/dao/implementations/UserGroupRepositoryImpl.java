@@ -2,10 +2,8 @@ package org.nuccode.dao.implementations;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.nuccode.dao.entity.User;
 import org.nuccode.dao.entity.UserGroup;
 import org.nuccode.dao.layers.UserGroupRepository;
-import org.nuccode.dao.layers.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

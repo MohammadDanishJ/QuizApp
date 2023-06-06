@@ -81,7 +81,6 @@ public class UserRepositoryImpl implements UserRepository {
         criteriaQuery.where(predicate);
 
         // Execute the query and return the result as a list of users
-        List<User> users = session.createQuery(criteriaQuery).getResultList();
-        return users;
+        return session.createQuery(criteriaQuery).getResultList();
     }
 }
