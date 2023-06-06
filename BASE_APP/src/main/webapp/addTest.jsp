@@ -38,8 +38,8 @@
               </div>
               <div id="problems-container">
                 <div class="card mb-4" data-problem-id="0">
-                  <div class="card-header">
-                    <h5 class="card-title">Problem 1</h5>
+                  <div class="card-header d-flex justify-content-between">
+                    <h5 class="card-title m-0">Problem 1</h5>
                     <button type="button" class="btn btn-danger btn-sm delete-btn" onclick="deleteProblem(this)"
                       disabled="true">
                       Delete
@@ -100,10 +100,12 @@
 
 
               </div>
-              <button type="button" class="btn btn-primary mb-4" onclick="addProblem()">
-                Add New Problem
-              </button>
-              <button type="submit" class="btn btn-primary">Save Test</button>
+              <div class="w-100 d-flex justify-content-center">
+                <button type="button" class="btn btn-secondary mx-2" onclick="addProblem()">
+                  Add New Problem
+                </button>
+                <button type="submit" class="btn btn-primary mx-2">Save Test</button>
+              </div>
             </form:form>
           </div>
           <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -120,8 +122,8 @@
                 '<div class="card mb-4" data-problem-id="' +
                 problemCount +
                 '">' +
-                '<div class="card-header">' +
-                '<h5 class="card-title">Problem ' +
+                '<div class="card-header d-flex justify-content-between">' +
+                '<h5 class="card-title m-0">Problem ' +
                 (problemCount + 1) +
                 "</h5>" +
                 '<button type="button" class="btn btn-danger btn-sm delete-btn" onclick="deleteProblem(this)">Delete</button>' +
