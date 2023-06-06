@@ -40,10 +40,10 @@
                 <div class="card mb-4" data-problem-id="0">
                   <div class="card-header d-flex justify-content-between">
                     <h5 class="card-title m-0">Problem 1</h5>
-                    <button type="button" class="btn btn-danger btn-sm delete-btn" onclick="deleteProblem(this)"
+                    <!-- <button type="button" class="btn btn-danger btn-sm delete-btn" onclick="deleteProblem(this)"
                       disabled="true">
                       Delete
-                    </button>
+                    </button> -->
                   </div>
                   <div class="card-body">
                     <div class="form-group">
@@ -83,10 +83,10 @@
                                 required="true" />
                             </td>
                             <td>
-                              <button type="button" class="btn btn-danger btn-sm delete-btn"
+                              <!-- <button type="button" class="btn btn-danger btn-sm delete-btn"
                                 onclick="deleteTestCase (this)" disabled="true">
                                 Delete
-                              </button>
+                              </button> -->
                             </td>
                           </tr>
                         </tbody>
@@ -159,6 +159,21 @@
                 "</tr>" +
                 "</thead>" +
                 "<tbody>" +
+                "<tr>" +
+                "<td>" +
+                '<textarea class="form-control" name="problems[' +
+                problemCount +
+                '].testCases[0].input" rows="1"></textarea>' +
+                "</td>" +
+                "<td>" +
+                '<textarea class="form-control" name="problems[' +
+                problemCount +
+                '].testCases[0].output"  rows="1" required="true"></textarea>' +
+                "</td>" +
+                "<td>" +
+                // '<button type="button" class="btn btn-danger btn-sm delete-btn" onclick="deleteTestCase(this)"  disabled="true">Delete</button>' +
+                "</td>" +
+                "</tr>" +
                 "</tbody>" +
                 "</table>" +
                 '<button type="button" class="btn btn-secondary btn-sm" onclick="addTestCase(this)">Add New Test Case</button>' +
